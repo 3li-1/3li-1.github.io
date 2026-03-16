@@ -2,14 +2,68 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>اختبار الموقع</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قريباً | الموقع تحت التطوير</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* لون ليلي فخم */
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        .container { text-align: center; padding: 20px; }
+        .logo { font-size: 50px; margin-bottom: 20px; animation: bounce 2s infinite; }
+        h1 { font-size: 2.5rem; margin-bottom: 15px; letter-spacing: -1px; }
+        p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 30px; }
+        
+        /* شريط التحميل الوهمي */
+        .progress-bar {
+            width: 250px;
+            height: 6px;
+            background: #334155;
+            border-radius: 10px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-fill {
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            border-radius: 10px;
+            animation: loading 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes loading {
+            0% { width: 0%; left: 0; }
+            50% { width: 70%; left: 15%; }
+            100% { width: 0%; left: 100%; }
+        }
+    </style>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; background-color: #f0f0f0;">
-    
-    <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <h1>Hello World! 🌍</h1>
-        <p>أهلاً بالعالم! الموقع يعمل بنجاح 🚀</p>
+<body>
+
+    <div class="container">
+        <div class="logo">🚀</div>
+        <h1>الموقع تحت التطوير</h1>
+        <p>أعمل حالياً على بناء تجربة رقمية فريدة. انتظروني قريباً!</p>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">قريباً على GitHub Pages</p>
     </div>
 
 </body>
 </html>
+
